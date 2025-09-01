@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Dare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f0f3e;
+      --accent: #00ffe0;
+      --glass: rgba(255, 255, 255, 0.1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f0f3e, #1a1a4f);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #444;
+    }
+    nav a {
+      color: var(--accent);
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 40px;
+      background-image: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e'); /* Happy family */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3em;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent);
+    }
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,224,0.2);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .voice-btn {
+      background: var(--accent);
+      color: #0f0f3e;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    select, input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    button[type="submit"] {
+      background: var(--accent);
+      color: #0f0f3e;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #444;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Digital Dare</strong></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#shops">Shops</a>
+      <a href="#games">Games</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Digital Dare</h1>
+      <p>Where innovation meets humanity. Explore our futuristic world.</p>
+      <button class="voice-btn" onclick="alert('Voice assistant activated!')">🎙️ Talk to Us</button>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About the Project</h2>
+    <div class="card">
+      <p>Digital Dare is a visionary platform blending education, technology, and creativity. Our mission is to empower communities through digital innovation.</p>
+    </div>
+  </section>
+
+  <section id="shops" class="section">
+    <h2>Featured Shops</h2>
+    <div class="card">
+      <p>🛍️ <strong>CodeMart</strong> — Buy digital tools, templates, and assets.</p>
+      <p>🎨 <strong>PixelBazaar</strong> — Art, icons, and UI kits for developers.</p>
+    </div>
+  </section>
+
+  <section id="games" class="section">
+    <h2>Games We Love</h2>
+    <div class="card">
+      <p>🎮 <strong>Logic Dash</strong> — A puzzle game built by our team.</p>
+      <p>🧠 <strong>CodeQuest</strong> — Learn programming through adventure.</p>
+    </div>
+  </section>
+
+  <section id="languages" class="section">
+    <h2>Choose Your Language</h2>
+    <div class="card">
+      <select>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="sw">Swahili</option>
+        <option value="tn">Setswana</option>
+      </select>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="card">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Digital Dare. Built for the future.
+  </footer>
+
+</body>
+</html>
